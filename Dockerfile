@@ -1,4 +1,2 @@
-FROM runpod/worker-comfyui:5.4.0-base
-COPY start.sh /start.sh
-RUN chmod +x /start.sh
-ENTRYPOINT ["/start.sh"]
+FROM runpod/worker-comfyui:5.1.0-base
+RUN mkdir -p /comfyui/models/loras && ln -s /runpod-volume /comfyui/models/loras/volumeloras
