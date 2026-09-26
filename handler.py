@@ -12,7 +12,7 @@ RUNPOD_ENDPOINT = os.getenv("RUNPOD_ENDPOINT", "http://localhost:8000/runsync")
 
 DEFAULT_MODEL = os.getenv(
     "DEFAULT_MODEL",
-    "ponyDiffusionV6XL_v6StartWithThisOne.safetensors"
+    "ponyDiffusionV6XL.safetensors"
 )
 
 DEFAULT_NEGATIVE_PROMPT = os.getenv(
@@ -371,6 +371,7 @@ if __name__ == "__main__":
         {
             "input": {
                 "prompt": "1girl, anime, beautiful eyes, masterpiece",
+                "model": "ponyDiffusionV6XL.safetensors",
                 "loras": [{"name": "Uiharu_Railgun.safetensors", "strength_model": 0.8, "strength_clip": 0.8}],
                 "width": 832,
                 "height": 1216,
